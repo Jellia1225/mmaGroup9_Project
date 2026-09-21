@@ -1,0 +1,201 @@
+flight_id,origin,destination,departure_date,base_fare,seats_remaining,capacity,route_demand,season,is_weekend
+PA101,Quebec City,Edmonton,2027-02-16,370.52,86,148,0.55,Regular,False
+PA102,Ottawa,Winnipeg,2027-12-10,433.0,20,247,0.38,Vacation,True
+PA103,Vancouver,Winnipeg,2027-01-28,244.08,8,216,0.26,Vacation,False
+PA104,Calgary,Vancouver,2027-01-03,169.16,81,116,0.24,Vacation,True
+PA105,Vancouver,Calgary,2027-07-15,790.3,177,291,0.31,Vacation,False
+PA106,Vancouver,Calgary,2027-09-13,647.39,47,172,0.97,Regular,False
+PA107,Ottawa,Winnipeg,2027-02-26,427.78,41,106,0.4,Regular,True
+PA108,Ottawa,Winnipeg,2027-11-09,221.55,2,121,0.6,Regular,False
+PA109,Ottawa,Montreal,2027-05-17,479.07,142,266,0.64,Regular,False
+PA110,Ottawa,Winnipeg,2027-11-07,780.55,140,146,0.55,Regular,True
+PA111,Ottawa,Vancouver,2027-12-25,747.61,162,247,0.93,Vacation,True
+PA112,Ottawa,Toronto,2027-10-19,507.22,181,183,0.73,Regular,False
+PA113,Toronto,Montreal,2027-10-23,568.11,250,283,0.58,Regular,True
+PA114,Winnipeg,Quebec City,2027-11-02,727.87,145,208,0.42,Regular,False
+PA115,Montreal,Vancouver,2027-12-11,113.08,96,183,0.37,Vacation,True
+PA116,Ottawa,Calgary,2027-10-05,264.78,161,174,0.1,Regular,False
+PA117,Calgary,Edmonton,2027-07-25,659.39,230,283,0.08,Vacation,True
+PA118,Quebec City,Montreal,2027-06-17,113.95,154,236,0.92,Vacation,False
+PA119,Winnipeg,Vancouver,2027-11-21,493.24,190,283,0.39,Regular,True
+PA120,Quebec City,Calgary,2027-03-15,428.96,6,113,0.16,Regular,False
+PA121,Montreal,Toronto,2027-02-15,794.11,199,241,0.2,Regular,False
+PA122,Montreal,Ottawa,2027-06-27,368.2,64,233,0.89,Vacation,True
+PA123,Toronto,Ottawa,2027-10-07,234.78,135,170,0.07,Regular,False
+PA124,Toronto,Quebec City,2027-12-21,461.32,66,210,0.86,Vacation,False
+PA125,Edmonton,Quebec City,2027-03-12,338.13,75,109,0.26,Regular,True
+PA126,Quebec City,Calgary,2027-06-13,346.52,245,293,0.19,Vacation,True
+PA127,Edmonton,Vancouver,2027-08-14,232.18,87,278,0.83,Vacation,True
+PA128,Toronto,Quebec City,2027-03-05,226.83,158,217,0.64,Regular,True
+PA129,Vancouver,Calgary,2027-01-07,627.72,59,112,0.59,Vacation,False
+PA130,Calgary,Edmonton,2027-02-05,182.39,72,112,0.69,Regular,True
+PA131,Winnipeg,Montreal,2027-04-10,375.98,78,105,0.89,Regular,True
+PA132,Calgary,Toronto,2027-09-22,457.26,126,213,0.03,Regular,False
+PA133,Calgary,Quebec City,2027-09-07,610.93,30,164,0.42,Regular,False
+PA134,Toronto,Vancouver,2027-10-24,199.49,8,124,0.96,Regular,True
+PA135,Toronto,Calgary,2027-08-12,616.52,9,172,0.38,Vacation,False
+PA136,Vancouver,Ottawa,2027-02-25,568.94,71,106,0.41,Regular,False
+PA137,Montreal,Calgary,2027-11-17,428.8,24,176,0.26,Regular,False
+PA138,Vancouver,Toronto,2027-10-28,118.03,176,260,0.46,Regular,False
+PA139,Winnipeg,Ottawa,2027-12-29,489.76,4,149,0.61,Vacation,False
+PA140,Vancouver,Winnipeg,2027-09-06,680.36,67,122,0.14,Regular,False
+PA141,Calgary,Ottawa,2027-07-20,426.48,134,157,0.18,Vacation,False
+PA142,Calgary,Winnipeg,2027-02-17,661.14,45,113,0.23,Regular,False
+PA143,Montreal,Toronto,2027-09-09,329.91,256,292,0.79,Regular,False
+PA144,Quebec City,Vancouver,2027-05-13,440.57,202,244,0.51,Regular,False
+PA145,Vancouver,Ottawa,2027-08-20,193.57,109,116,0.72,Vacation,True
+PA146,Vancouver,Quebec City,2027-10-31,222.58,70,229,0.76,Regular,True
+PA147,Edmonton,Winnipeg,2027-06-22,620.73,5,201,0.65,Vacation,False
+PA148,Quebec City,Vancouver,2027-03-20,468.34,120,154,0.65,Regular,True
+PA149,Montreal,Winnipeg,2027-12-19,576.21,238,273,0.42,Vacation,True
+PA150,Edmonton,Ottawa,2027-05-17,263.57,94,103,0.43,Regular,False
+PA151,Toronto,Calgary,2027-04-28,633.14,214,241,0.28,Regular,False
+PA152,Ottawa,Edmonton,2027-08-03,247.8,175,236,0.39,Vacation,False
+PA153,Winnipeg,Vancouver,2027-09-10,642.21,16,149,0.52,Regular,True
+PA154,Montreal,Edmonton,2027-06-12,558.72,111,161,0.23,Vacation,True
+PA155,Winnipeg,Ottawa,2027-05-25,556.51,104,130,0.46,Regular,False
+PA156,Winnipeg,Quebec City,2027-04-21,747.18,42,210,0.11,Regular,False
+PA157,Ottawa,Toronto,2027-10-27,505.36,249,283,0.12,Regular,False
+PA158,Vancouver,Quebec City,2027-07-11,435.91,58,185,0.24,Vacation,True
+PA159,Ottawa,Edmonton,2027-01-16,457.69,84,105,0.36,Vacation,True
+PA160,Winnipeg,Vancouver,2027-01-21,260.66,102,272,0.3,Vacation,False
+PA161,Edmonton,Toronto,2027-09-01,189.98,20,245,0.95,Regular,False
+PA162,Quebec City,Calgary,2027-03-07,269.4,64,115,0.17,Regular,True
+PA163,Montreal,Winnipeg,2027-05-27,119.22,5,198,0.37,Regular,False
+PA164,Winnipeg,Quebec City,2027-10-16,600.04,86,232,0.66,Regular,True
+PA165,Quebec City,Edmonton,2027-11-16,561.63,84,249,0.72,Regular,False
+PA166,Calgary,Montreal,2027-04-19,571.38,182,183,0.34,Regular,False
+PA167,Toronto,Vancouver,2027-08-11,112.86,58,122,0.27,Vacation,False
+PA168,Winnipeg,Calgary,2027-05-04,712.31,80,112,0.15,Regular,False
+PA169,Edmonton,Vancouver,2027-09-07,754.99,104,294,0.9,Regular,False
+PA170,Montreal,Ottawa,2027-09-10,734.52,199,228,0.31,Regular,True
+PA171,Vancouver,Ottawa,2027-02-26,489.37,156,273,0.44,Regular,True
+PA172,Ottawa,Toronto,2027-06-16,115.54,68,201,0.33,Vacation,False
+PA173,Calgary,Winnipeg,2027-04-26,462.58,88,131,0.19,Regular,False
+PA174,Winnipeg,Edmonton,2027-10-27,518.6,113,289,0.85,Regular,False
+PA175,Vancouver,Winnipeg,2027-09-24,727.74,109,177,0.9,Regular,True
+PA176,Calgary,Ottawa,2027-03-16,190.16,142,251,0.48,Regular,False
+PA177,Quebec City,Edmonton,2027-06-30,421.46,30,127,0.17,Vacation,False
+PA178,Toronto,Montreal,2027-02-18,265.3,155,235,0.47,Regular,False
+PA179,Calgary,Toronto,2027-12-20,588.58,128,264,0.35,Vacation,False
+PA180,Quebec City,Toronto,2027-11-30,399.8,152,194,0.36,Regular,False
+PA181,Vancouver,Ottawa,2027-08-29,164.01,158,249,0.01,Vacation,True
+PA182,Edmonton,Toronto,2027-08-20,366.98,170,175,0.14,Vacation,True
+PA183,Ottawa,Winnipeg,2027-08-05,150.83,58,258,0.71,Vacation,False
+PA184,Quebec City,Vancouver,2027-05-31,339.71,6,150,0.65,Regular,False
+PA185,Calgary,Montreal,2027-06-09,403.41,9,147,0.68,Vacation,False
+PA186,Quebec City,Calgary,2027-06-23,365.46,71,190,0.01,Vacation,False
+PA187,Ottawa,Vancouver,2027-08-01,334.8,0,257,0.86,Vacation,True
+PA188,Calgary,Vancouver,2027-06-28,622.38,22,269,0.0,Vacation,False
+PA189,Edmonton,Ottawa,2027-10-12,234.46,1,224,0.51,Regular,False
+PA190,Winnipeg,Calgary,2027-03-21,383.39,86,122,0.6,Regular,True
+PA191,Toronto,Ottawa,2027-11-18,569.84,57,185,0.98,Regular,False
+PA192,Quebec City,Winnipeg,2027-10-07,632.77,231,272,0.4,Regular,False
+PA193,Edmonton,Montreal,2027-01-08,654.68,18,110,0.17,Vacation,True
+PA194,Winnipeg,Toronto,2027-06-16,454.66,82,157,0.27,Vacation,False
+PA195,Vancouver,Montreal,2027-07-22,297.81,276,296,0.12,Vacation,False
+PA196,Quebec City,Toronto,2027-06-29,438.33,132,199,0.39,Vacation,False
+PA197,Quebec City,Ottawa,2027-10-15,721.39,59,145,0.83,Regular,True
+PA198,Edmonton,Calgary,2027-09-17,318.17,69,126,0.73,Regular,True
+PA199,Edmonton,Vancouver,2027-05-11,785.11,117,143,0.02,Regular,False
+PA200,Winnipeg,Ottawa,2027-10-31,796.46,2,226,0.24,Regular,True
+PA201,Toronto,Montreal,2027-02-07,261.48,111,128,0.05,Regular,True
+PA202,Quebec City,Ottawa,2027-01-04,505.21,41,135,0.57,Vacation,False
+PA203,Calgary,Quebec City,2027-10-08,311.28,73,260,0.2,Regular,True
+PA204,Montreal,Toronto,2027-03-24,511.71,43,161,0.95,Regular,False
+PA205,Montreal,Edmonton,2027-06-02,676.12,39,140,0.18,Vacation,False
+PA206,Montreal,Vancouver,2027-11-25,477.92,71,193,0.16,Regular,False
+PA207,Vancouver,Ottawa,2027-12-22,792.96,98,286,0.79,Vacation,False
+PA208,Ottawa,Quebec City,2027-04-29,261.46,60,132,0.28,Regular,False
+PA209,Calgary,Edmonton,2027-05-10,427.55,238,257,0.33,Regular,False
+PA210,Quebec City,Calgary,2027-07-16,180.77,88,109,0.38,Vacation,True
+PA211,Edmonton,Ottawa,2027-10-16,400.84,90,167,0.85,Regular,True
+PA212,Winnipeg,Calgary,2027-09-25,621.8,163,239,0.82,Regular,True
+PA213,Montreal,Edmonton,2027-04-01,210.27,219,271,0.21,Regular,False
+PA214,Winnipeg,Edmonton,2027-04-17,675.71,19,128,0.64,Regular,True
+PA215,Quebec City,Vancouver,2027-05-25,102.07,256,289,0.39,Regular,False
+PA216,Toronto,Ottawa,2027-09-05,591.87,111,176,0.51,Regular,True
+PA217,Winnipeg,Quebec City,2027-05-31,470.87,26,289,0.01,Regular,False
+PA218,Winnipeg,Vancouver,2027-09-14,567.45,82,138,0.74,Regular,False
+PA219,Calgary,Quebec City,2027-04-15,613.98,152,158,0.93,Regular,False
+PA220,Ottawa,Calgary,2027-05-25,659.53,103,145,0.92,Regular,False
+PA221,Ottawa,Vancouver,2027-12-18,259.27,142,193,0.99,Vacation,True
+PA222,Vancouver,Calgary,2027-07-13,785.71,18,130,0.87,Vacation,False
+PA223,Vancouver,Winnipeg,2027-05-06,203.3,156,264,0.36,Regular,False
+PA224,Toronto,Montreal,2027-08-03,640.06,75,153,0.96,Vacation,False
+PA225,Toronto,Ottawa,2027-01-21,628.3,164,165,0.22,Vacation,False
+PA226,Ottawa,Quebec City,2027-03-27,645.99,83,230,0.46,Regular,True
+PA227,Winnipeg,Ottawa,2027-10-31,692.17,85,197,0.26,Regular,True
+PA228,Montreal,Vancouver,2027-06-09,250.18,147,230,0.97,Vacation,False
+PA229,Calgary,Winnipeg,2027-12-18,780.0,192,286,0.04,Vacation,True
+PA230,Calgary,Vancouver,2027-07-21,386.7,7,172,0.32,Vacation,False
+PA231,Montreal,Vancouver,2027-07-15,557.28,173,278,0.53,Vacation,False
+PA232,Quebec City,Edmonton,2027-08-07,457.1,36,181,0.32,Vacation,True
+PA233,Quebec City,Vancouver,2027-02-07,566.09,69,246,0.79,Regular,True
+PA234,Quebec City,Winnipeg,2027-10-20,452.33,75,103,0.63,Regular,False
+PA235,Quebec City,Edmonton,2027-06-14,335.59,33,188,0.42,Vacation,False
+PA236,Calgary,Vancouver,2027-06-19,552.28,37,109,0.98,Vacation,True
+PA237,Ottawa,Quebec City,2027-02-24,315.43,46,165,0.04,Regular,False
+PA238,Ottawa,Montreal,2027-01-09,781.53,49,209,0.55,Vacation,True
+PA239,Calgary,Ottawa,2027-09-03,725.52,6,275,0.03,Regular,True
+PA240,Calgary,Ottawa,2027-03-19,705.3,103,230,0.95,Regular,True
+PA241,Ottawa,Quebec City,2027-05-16,494.38,117,158,0.24,Regular,True
+PA242,Edmonton,Vancouver,2027-03-26,469.06,107,131,0.38,Regular,True
+PA243,Edmonton,Toronto,2027-12-20,274.76,232,267,0.28,Vacation,False
+PA244,Winnipeg,Vancouver,2027-08-19,476.85,8,112,0.85,Vacation,False
+PA245,Vancouver,Edmonton,2027-05-21,554.63,189,207,0.44,Regular,True
+PA246,Ottawa,Montreal,2027-03-14,397.51,29,169,0.6,Regular,True
+PA247,Quebec City,Winnipeg,2027-10-16,719.95,76,244,0.68,Regular,True
+PA248,Vancouver,Winnipeg,2027-08-14,772.5,69,109,0.79,Vacation,True
+PA249,Ottawa,Winnipeg,2027-07-29,799.71,35,230,0.81,Vacation,False
+PA250,Toronto,Quebec City,2027-02-19,433.18,152,185,0.74,Regular,True
+PA251,Ottawa,Montreal,2027-04-13,432.05,53,110,0.81,Regular,False
+PA252,Toronto,Vancouver,2027-09-27,586.76,41,298,0.7,Regular,False
+PA253,Winnipeg,Ottawa,2027-02-10,763.37,232,280,0.5,Regular,False
+PA254,Vancouver,Toronto,2027-07-19,134.17,144,167,0.61,Vacation,False
+PA255,Montreal,Toronto,2027-09-27,323.05,89,154,0.2,Regular,False
+PA256,Calgary,Edmonton,2027-08-24,394.17,147,178,0.26,Vacation,False
+PA257,Quebec City,Toronto,2027-05-03,760.93,5,224,0.27,Regular,False
+PA258,Winnipeg,Montreal,2027-11-28,229.59,232,272,0.1,Regular,True
+PA259,Toronto,Quebec City,2027-10-06,110.36,273,284,0.92,Regular,False
+PA260,Vancouver,Montreal,2027-06-19,254.24,42,125,0.95,Vacation,True
+PA261,Montreal,Ottawa,2027-07-17,706.37,154,234,0.02,Vacation,True
+PA262,Calgary,Edmonton,2027-06-12,631.03,58,191,0.78,Vacation,True
+PA263,Vancouver,Quebec City,2027-02-08,120.38,101,122,0.92,Regular,False
+PA264,Winnipeg,Quebec City,2027-10-05,557.12,44,124,0.36,Regular,False
+PA265,Toronto,Quebec City,2027-07-21,706.15,138,225,0.53,Vacation,False
+PA266,Ottawa,Toronto,2027-05-19,532.25,267,272,0.33,Regular,False
+PA267,Calgary,Edmonton,2027-06-23,338.22,86,159,0.83,Vacation,False
+PA268,Montreal,Quebec City,2027-12-09,112.77,181,250,0.94,Vacation,False
+PA269,Winnipeg,Calgary,2027-02-18,455.26,75,107,0.18,Regular,False
+PA270,Vancouver,Winnipeg,2027-06-17,525.95,13,136,0.65,Vacation,False
+PA271,Calgary,Edmonton,2027-01-28,189.42,159,200,0.61,Vacation,False
+PA272,Montreal,Winnipeg,2027-11-03,278.68,202,203,0.85,Regular,False
+PA273,Calgary,Edmonton,2027-11-28,767.03,78,182,0.77,Regular,True
+PA274,Vancouver,Montreal,2027-08-22,481.35,71,172,0.97,Vacation,True
+PA275,Edmonton,Winnipeg,2027-02-01,299.78,5,278,0.69,Regular,False
+PA276,Quebec City,Edmonton,2027-02-21,471.06,11,226,0.2,Regular,True
+PA277,Winnipeg,Edmonton,2027-04-03,586.13,222,227,0.27,Regular,True
+PA278,Montreal,Vancouver,2027-09-19,723.93,231,249,0.99,Regular,True
+PA279,Montreal,Vancouver,2027-10-25,603.03,35,145,0.94,Regular,False
+PA280,Ottawa,Winnipeg,2027-06-07,533.84,78,193,0.54,Vacation,False
+PA281,Calgary,Quebec City,2027-10-10,631.05,106,127,0.34,Regular,True
+PA282,Calgary,Quebec City,2027-11-22,323.39,96,202,0.59,Regular,False
+PA283,Montreal,Quebec City,2027-05-28,469.16,215,239,0.05,Regular,True
+PA284,Ottawa,Edmonton,2027-09-30,720.05,101,186,0.22,Regular,False
+PA285,Winnipeg,Calgary,2027-10-16,151.86,148,225,0.75,Regular,True
+PA286,Ottawa,Toronto,2027-12-17,149.86,244,246,0.78,Vacation,True
+PA287,Vancouver,Edmonton,2027-12-07,734.6,48,184,0.11,Vacation,False
+PA288,Edmonton,Toronto,2027-09-05,573.79,16,187,0.64,Regular,True
+PA289,Calgary,Ottawa,2027-08-30,145.1,152,177,0.67,Vacation,False
+PA290,Montreal,Toronto,2027-11-05,122.06,3,185,0.84,Regular,True
+PA291,Quebec City,Vancouver,2027-06-24,750.91,89,257,0.72,Vacation,False
+PA292,Winnipeg,Ottawa,2027-10-26,615.25,68,106,0.45,Regular,False
+PA293,Winnipeg,Quebec City,2027-01-31,505.62,108,227,0.11,Vacation,True
+PA294,Edmonton,Winnipeg,2027-04-23,366.01,120,190,0.27,Regular,True
+PA295,Calgary,Toronto,2027-12-21,507.36,40,135,0.68,Vacation,False
+PA296,Edmonton,Vancouver,2027-10-31,784.49,46,211,0.82,Regular,True
+PA297,Ottawa,Calgary,2027-05-24,450.73,40,100,0.85,Regular,False
+PA298,Quebec City,Toronto,2027-01-14,314.96,165,168,0.02,Vacation,False
+PA299,Winnipeg,Calgary,2027-11-20,722.75,135,148,0.92,Regular,True
+PA300,Toronto,Ottawa,2027-05-15,739.68,107,128,0.51,Regular,True
