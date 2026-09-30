@@ -27,28 +27,30 @@ This project uses a dataset representing flights operated by Potter Airlines, an
 The dataset is stored in "flights.csv" and is also represented in Python as a list of dictionaries. These dictionaries are then used to create "Flight" objects through the project's "Flight" class.
 
 ### Dataset assumptions: ###
-1- The dataset contains 200 flights, all of which have a unique flight id.
+1. The dataset contains 200 flights, all of which have a unique flight id.
 
-2- The Canadian cities in the data are: Toronto, Vancouver, Montreal, Quebec City, Calgary, Edmonton, Ottawa, and Winnipeg.
+2. The Canadian cities in the data are: Toronto, Vancouver, Montreal, Quebec City, Calgary, Edmonton, Ottawa, and Winnipeg.
   2.1- A flight cannot have the same origin and destination.
 
-3- Each date within the selected period of 01-01-2027 and 31-12-2027 is assumed to be equally likely.
+3. Each date within the selected period of 01-01-2027 and 31-12-2027 is assumed to be equally likely.
 
-4- June, July, August, December, and January are classified as vacation periods, and all other months as regular periods. This assumption aims to capture periods in which leisure travel may be higher, and therefore, flight prices might increase.
+4. June, July, August, December, and January are classified as vacation periods, and all other months as regular periods. This assumption aims to capture periods in which leisure travel may be higher, and therefore, flight prices might increase.
 
-5- Friday, Saturday, and Sunday are classified as weekend days, while Monday through Thursday are classified as weekdays.
+5. Friday, Saturday, and Sunday are classified as weekend days, while Monday through Thursday are classified as weekdays.
 
-6- The selected aircraft capacity range of 100-300 assumes to represent the different aircraft sizes that Potter Airlines may operate.
-  6.1- The selected range is assumed to represent realistic aircraft capacities for national-level flights.
+6. The selected aircraft capacity range of 100-300 assumes to represent the different aircraft sizes that Potter Airlines may operate.
 
-7- A flight's number of seats remaining can never exceed the aircraft's capacity.
+  6.1 The selected range is assumed to represent realistic aircraft capacities for national-level flights.
 
-8- The base fare interval of $200-$800 has been assumed to represent realistic Canadian national-level flight base fares.
+7. A flight's number of seats remaining can never exceed the aircraft's capacity.
 
-9- The route demand attribute is treated as a continuous variable, where a value closer to 0 represents lower demand and a value closer to 1 represents higher demand.
+8. The base fare interval of $200-$800 has been assumed to represent realistic Canadian national-level flight base fares.
 
-10- The initial dataset generation treats most variables as independently randomized within their defined ranges.
-  10.1- Relationships between attributes are later considered by the dynamic pricing model rather than being directly imposed. This allows for edge cases to arise (e.g. combinations of flights with little days until departure, low seats remaining, etc.) and be implemented and analyzed properly by the pricing model.
+9.  The route demand attribute is treated as a continuous variable, where a value closer to 0 represents lower demand and a value closer to 1 represents higher demand.
+
+10. The initial dataset generation treats most variables as independently randomized within their defined ranges.
+  
+  10.1. Relationships between attributes are later considered by the dynamic pricing model rather than being directly imposed. This allows for edge cases to arise (e.g. combinations of flights with little days until departure, low seats remaining, etc.) and be implemented and analyzed properly by the pricing model.
 
 ## Part II: Pricing Model ##
 The pricing model calculates a dynamic ticket price for each flight by applying five pricing factors to the base fare. These factors include time to departure, route demand, flight capacity, travel season, and whether the flight is scheduled on a weekend.
@@ -70,6 +72,6 @@ The final adjusted fare is calculated as:
 ### Pricing Date ###
 The model allows the user to enter a pricing date, which is used to calculate the number of days between the pricing date and the departure date. If the user does not enter a date, the model uses today's date as the default.
 
-### Final Price###
+### Final Price ###
 After all pricing factors are applied, a minimum and maximum fare are used to keep the final prices within a reasonable range. The adjusted fare is limited between $200 and $800. The final output includes the original flight information, each pricing factor, and the adjusted fare. This allows us to compare the final prices across flights and understand how different factors affect the pricing results.
 
