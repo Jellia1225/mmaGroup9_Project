@@ -8,19 +8,29 @@
 Before running the code, please make sure that at least the following files are located in the same folder:
 
 booking.py
+
 config.py
+
 database.py
+
 flight_class.py
+
 main.py
+
 price_model.ipynb
+
 search_flight.py
 
 Please also make sure that the following Python packages are installed in your environment:
 
 pandas
+
 nbformat
+
 nbclient
+
 ipykernel
+
 matplotlib
 
 Once everything is set up, please run main.py to start the program.
