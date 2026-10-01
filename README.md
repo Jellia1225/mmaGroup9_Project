@@ -102,3 +102,14 @@ The model allows the user to enter a pricing date, which is used to calculate th
 ### Final Price ###
 After all pricing factors are applied, a minimum and maximum fare are used to keep the final prices within a reasonable range. The adjusted fare is limited between $200 and $800. The final output includes the original flight information, each pricing factor, and the adjusted fare. This allows us to compare the final prices across flights and understand how different factors affect the pricing results.
 
+
+## Part V: Validation, Testing & Edge Cases ##
+This part checks flight data, fares, and booking inputs. It includes validation.py and test_pricing.py.
+
+### Validation — validation.py###
+The validation checks cover flight information, fare limits, and booking quantities. The 39 checks include valid inputs and edge cases. For example, setting capacity = 0 triggers the expected validation error.
+The validation functions are also used in pricing.py and booking.py. They check flight data before pricing and booking inputs before seats are updated.
+
+### Pricing Tests — test_pricing.py ###
+This file runs 32 tests on the pricing function. The tests cover pricing boundaries and common edge cases using controlled test data and a fixed pricing date, without changing the original CSV.
+The output shows whether each expected price or result was confirmed, or whether a test failed.
