@@ -3,6 +3,29 @@
 <img src="airlineicon.png" width="250">
 
 
+## Part 0: Before You Start ##
+
+Before running the code, please make sure that at least the following files are located in the same folder:
+
+booking.py
+config.py
+database.py
+flight_class.py
+main.py
+price_model.ipynb
+search_flight.py
+
+Please also make sure that the following Python packages are installed in your environment:
+
+pandas
+nbformat
+nbclient
+ipykernel
+matplotlib
+
+Once everything is set up, please run main.py to start the program.
+
+
 ## Part I: Dataset Introduction ##
 This project uses a dataset representing flights operated by Potter Airlines, an airline that has been considered to operate between major Canadian cities. The dataset contains 200 flights for the upcoming year 2027. The attribute values have been randomized in order to support the development and testing of the dynamic pricing model. 
 
