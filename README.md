@@ -102,6 +102,22 @@ The model allows the user to enter a pricing date, which is used to calculate th
 ### Final Price ###
 After all pricing factors are applied, a minimum and maximum fare are used to keep the final prices within a reasonable range. The adjusted fare is limited between $200 and $800. The final output includes the original flight information, each pricing factor, and the adjusted fare. This allows us to compare the final prices across flights and understand how different factors affect the pricing results.
 
+## Part 3: SQLite Database ##
+
+### Database Setup and Data Import - database.py ###
+This file sets up the SQLite flight database and creates the flights table to store flight information. It reads the original CSV file, standardizes departure dates to YYYY-MM-DD format, converts weekend indicators to Boolean values, and saves the cleaned data as flights_formatted.csv. It then clears the existing records and imports the formatted flight data into the database.
+
+### Flight Search - search_flight.py ###
+This file implements the flight search functionality. It collects the user's origin, destination, departure date, and optional maximum price, and queries the SQLite database for matching flights.
+
+It also saves the search date to search_state.json and executes price_model.ipynb to calculate or update flight prices. The resulting prices are then joined with the matching flight records and returned to the user.
+
+### Flight Booking - booking.py ###
+This file handles flight booking by asking the user for the number of tickets and checking seat availability in the SQLite database. To prevent overbooking, the UPDATE statement only reduces seats_remaining when enough seats are available.
+
+### Program Execution - main.py ###
+This file serves as the main entry point of the program and coordinates the different components. It first checks whether the database and required tables are ready; if not, it automatically runs flight_class.py and database.py to initialize them. It then calls search_flights() to display matching flights and allows the user to select a flight and complete the booking process through book_flight().
+
 
 ## Part V: Validation, Testing & Edge Cases ##
 This part checks flight data, fares, and booking inputs. It includes validation.py and test_pricing.py.
