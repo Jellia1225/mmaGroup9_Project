@@ -30,6 +30,7 @@ The dataset is stored in "flights.csv" and is also represented in Python as a li
 1. The dataset contains 200 flights, all of which have a unique flight id.
 
 2. The Canadian cities in the data are: Toronto, Vancouver, Montreal, Quebec City, Calgary, Edmonton, Ottawa, and Winnipeg.
+
   2.1- A flight cannot have the same origin and destination.
 
 3. Each date within the selected period of 01-01-2027 and 31-12-2027 is assumed to be equally likely.
