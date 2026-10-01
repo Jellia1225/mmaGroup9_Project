@@ -26,7 +26,7 @@ def search_flights():
         f"Departure Date (YYYY-MM-DD, press Enter for {date.today()}): "
     ).strip()
 
-    save_search_date(str(date.today())
+    save_search_date(str(date.today()))
 
     if search_departure_date == "":
         search_departure_date = str(date.today())
