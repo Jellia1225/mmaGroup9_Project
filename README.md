@@ -3,7 +3,7 @@
 <img src="airlineicon.png" width="250">
 
 
-## Part 0: Before You Start ##
+## Part 0 : Before You Start ##
 
 Before running the code, please make sure that at least the following files are located in the same folder:
 
@@ -26,7 +26,7 @@ matplotlib <br>
 Once everything is set up, please run main.py to start the program.
 
 
-## Part I: Dataset Introduction ##
+## Part 1: Dataset Introduction ##
 This project uses a dataset representing flights operated by Potter Airlines, an airline that has been considered to operate between major Canadian cities. The dataset contains 200 flights for the upcoming year 2027. The attribute values have been randomized in order to support the development and testing of the dynamic pricing model. 
 
 ### Dataset variables: ###
@@ -57,7 +57,7 @@ The dataset is stored in "flights.csv" and is also represented in Python as a li
 
 2. The Canadian cities in the data are: Toronto, Vancouver, Montreal, Quebec City, Calgary, Edmonton, Ottawa, and Winnipeg.
 
-  2.1- A flight cannot have the same origin and destination.
+   2.1 A flight cannot have the same origin and destination.
 
 3. Each date within the selected period of 01-01-2027 and 31-12-2027 is assumed to be equally likely.
 
@@ -67,7 +67,7 @@ The dataset is stored in "flights.csv" and is also represented in Python as a li
 
 6. The selected aircraft capacity range of 100-300 assumes to represent the different aircraft sizes that Potter Airlines may operate.
 
-  6.1 The selected range is assumed to represent realistic aircraft capacities for national-level flights.
+   6.1 The selected range is assumed to represent realistic aircraft capacities for national-level flights.
 
 7. A flight's number of seats remaining can never exceed the aircraft's capacity.
 
@@ -77,9 +77,9 @@ The dataset is stored in "flights.csv" and is also represented in Python as a li
 
 10. The initial dataset generation treats most variables as independently randomized within their defined ranges.
   
-  10.1. Relationships between attributes are later considered by the dynamic pricing model rather than being directly imposed. This allows for edge cases to arise (e.g. combinations of flights with little days until departure, low seats remaining, etc.) and be implemented and analyzed properly by the pricing model.
+    10.1. Relationships between attributes are later considered by the dynamic pricing model rather than being directly imposed. This allows for edge cases to arise (e.g. combinations of flights with little days until departure, low seats remaining, etc.) and be implemented and analyzed properly by the pricing model.
 
-## Part II: Pricing Model ##
+## Part 2 : Pricing Model ##
 The pricing model calculates a dynamic ticket price for each flight by applying five pricing factors to the base fare. These factors include time to departure, route demand, flight capacity, travel season, and whether the flight is scheduled on a weekend.
 The final adjusted fare is calculated as:
 
@@ -102,7 +102,7 @@ The model allows the user to enter a pricing date, which is used to calculate th
 ### Final Price ###
 After all pricing factors are applied, a minimum and maximum fare are used to keep the final prices within a reasonable range. The adjusted fare is limited between $200 and $800. The final output includes the original flight information, each pricing factor, and the adjusted fare. This allows us to compare the final prices across flights and understand how different factors affect the pricing results.
 
-## Part 3: SQLite Database ##
+## Part 3 : SQLite Database ##
 
 ### Database Setup and Data Import - database.py ###
 This file sets up the SQLite flight database and creates the flights table to store flight information. It reads the original CSV file, standardizes departure dates to YYYY-MM-DD format, converts weekend indicators to Boolean values, and saves the cleaned data as flights_formatted.csv. It then clears the existing records and imports the formatted flight data into the database.
@@ -119,10 +119,28 @@ This file handles flight booking by asking the user for the number of tickets an
 This file serves as the main entry point of the program and coordinates the different components. It first checks whether the database and required tables are ready; if not, it automatically runs flight_class.py and database.py to initialize them. It then calls search_flights() to display matching flights and allows the user to select a flight and complete the booking process through book_flight().
 
 
-## Part V: Validation, Testing & Edge Cases ##
+## Part 4 : Results ##
+
+After running  main.py, open price_model.ipynb to view the pricing results, which compare each flight’s base fare to its final fare.
+
+### Outputs: ###
+Most Expensive Flights: the five flights with the highest final fare.
+
+Least Expensive Flights: the five flights with the lowest final fare.
+
+Price Factor: each flight's price increase factor, calculated as final_fare / base_fare
+
+Price Distribution Histogram: the distribution of final_fare across all flights.
+
+Summary Statistics: summary statistics (e.g. mean, min, max) for both base_fare and final_fare
+
+
+
+
+## Part 5 : Validation, Testing & Edge Cases ##
 This part checks flight data, fares, and booking inputs. It includes validation.py and test_pricing.py.
 
-### Validation — validation.py###
+### Validation — validation.py ###
 The validation checks cover flight information, fare limits, and booking quantities. The 39 checks include valid inputs and edge cases. For example, setting capacity = 0 triggers the expected validation error.
 The validation functions are also used in pricing.py and booking.py. They check flight data before pricing and booking inputs before seats are updated.
 
