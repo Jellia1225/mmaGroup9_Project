@@ -14,6 +14,7 @@ flight_class.py <br>
 main.py <br>
 price_model.ipynb <br>
 search_flight.py <br>
+flights.csv (Please name the raw data file for testing as flights.csv) <br>
 
 Please also make sure that the following Python packages are installed in your environment:
 
@@ -108,12 +109,12 @@ After all pricing factors are applied, a minimum and maximum fare are used to ke
 This file sets up the SQLite flight database and creates the flights table to store flight information. It reads the original CSV file, standardizes departure dates to YYYY-MM-DD format, converts weekend indicators to Boolean values, and saves the cleaned data as flights_formatted.csv. It then clears the existing records and imports the formatted flight data into the database.
 
 ### Flight Search - search_flight.py ###
-This file implements the flight search functionality. It collects the user's origin, destination, departure date, and optional maximum price, and queries the SQLite database for matching flights.
+This file implements the flight search functionality. It collects the user's origin, destination, departure date, and optional maximum price, and queries the SQLite database for matching flights. If the user enters a departure or destination that does not exist, the system displays: “No matching flights found.”
 
 It also saves the search date to search_state.json and executes price_model.ipynb to calculate or update flight prices. The resulting prices are then joined with the matching flight records and returned to the user.
 
 ### Flight Booking - booking.py ###
-This file handles flight booking by asking the user for the number of tickets and checking seat availability in the SQLite database. To prevent overbooking, the UPDATE statement only reduces seats_remaining when enough seats are available.
+This file handles flight booking by asking the user for the number of tickets and checking seat availability in the SQLite database. To prevent overbooking, the UPDATE statement only reduces seats_remaining when enough seats are available and successfully booked.
 
 ### Program Execution - main.py ###
 This file serves as the main entry point of the program and coordinates the different components. It first checks whether the database and required tables are ready; if not, it automatically runs flight_class.py and database.py to initialize them. It then calls search_flights() to display matching flights and allows the user to select a flight and complete the booking process through book_flight().
