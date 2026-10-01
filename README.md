@@ -1,8 +1,7 @@
 # Group 9 Potter Airlines Pricing Model
 
-<p align="center">
-  <img src="airlineicon.png" width="700">
-</p>
+<img src="airlineicon.png" width="350">
+
 
 ## Part I: Dataset Introduction ##
 This project uses a dataset representing flights operated by Potter Airlines, an airline that has been considered to operate between major Canadian cities. The dataset contains 200 flights for the upcoming year 2027. The attribute values have been randomized in order to support the development and testing of the dynamic pricing model. 
