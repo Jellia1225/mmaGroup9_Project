@@ -14,6 +14,7 @@ flight_class.py <br>
 main.py <br>
 price_model.ipynb <br>
 search_flight.py <br>
+flights.csv (Please name the raw data file for testing as flights.csv) <br>
 
 Please also make sure that the following Python packages are installed in your environment:
 
