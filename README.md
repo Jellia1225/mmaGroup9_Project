@@ -148,3 +148,14 @@ The validation functions are also used in pricing.py and booking.py. They check 
 ### Pricing Tests — test_pricing.py ###
 This file runs 32 tests on the pricing function. The tests cover pricing boundaries and common edge cases using controlled test data and a fixed pricing date, without changing the original CSV.
 The output shows whether each expected price or result was confirmed, or whether a test failed.
+
+## Part 6 : Known Limitations ##
+
+- **Single-flight booking**: The current system only allows users to book one flight at a time. Round trips or multiple flights cannot be booked together.
+
+- **Simulated flight data**: The flight data is randomly generated for this project and does not represent real-time airline information.
+
+- **Predefined pricing rules**: The pricing factors and thresholds are predefined for this project instead of being estimated from historical airline pricing data.
+
+- **Seat and class selection**: The current booking system does not allow users to choose a specific seat or ticket class. All bookings are treated the same without separating economy and business class.
+
