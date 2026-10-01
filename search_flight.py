@@ -11,7 +11,7 @@ from pathlib import Path
 
 STATE_FILE = Path(__file__).parent / "search_state.json"
 
-
+# save the searching date into a json for price_model.ipynb
 def save_search_date(search_date):
     STATE_FILE.write_text(json.dumps({"search_date": str(search_date)}))
 
@@ -26,7 +26,7 @@ def search_flights():
         f"Departure Date (YYYY-MM-DD, press Enter for {date.today()}): "
     ).strip()
 
-    save_search_date(search_departure_date)
+    save_search_date(str(date.today())
 
     if search_departure_date == "":
         search_departure_date = str(date.today())
