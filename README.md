@@ -1,6 +1,6 @@
 # Group 9 Potter Airlines Pricing Model
 
-<img src="airlineicon.png" width="350">
+<img src="airlineicon.png" width="250">
 
 
 ## Part I: Dataset Introduction ##
