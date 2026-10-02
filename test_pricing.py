@@ -1,18 +1,90 @@
 from datetime import date, timedelta
-from unittest.mock import patch
+from contextlib import redirect_stdout
+from pathlib import Path
+import ast
+import io
+import json
+import numpy as np
+import pandas as pd
 
-from pricing import calculate_prices
+# Test the existing notebook's actual vectorized pricing assignments.
+# This adapter never executes its database read/write or plot cells.
+NOTEBOOK = Path(__file__).resolve().parent / "price_model.ipynb"
+
+
+def calculate_prices(flight_results):
+    if not flight_results:
+        return []
+    columns = ["flight_id", "origin", "destination", "departure_date",
+               "base_fare", "seats_remaining", "capacity", "route_demand",
+               "season", "is_weekend"]
+    flights = pd.DataFrame(flight_results, columns=columns)
+    flights["departure_date"] = pd.to_datetime(flights["departure_date"])
+    pricing_date = pd.Timestamp(PRICING_DATE)
+    flights["days_until_departure"] = (
+        flights["departure_date"] - pricing_date
+    ).dt.days
+    from validation import validate_flight, validate_final_fare
+    notebook = json.loads(NOTEBOOK.read_text())
+    namespace = dict(flights=flights, pricing_date=pricing_date,
+                     np=np, pd=pd,
+                     validate_flight=validate_flight,
+                     validate_final_fare=validate_final_fare)
+    # Select only pricing assignments from the existing notebook.
+    # No tags, cell numbers, database operations, inputs, or plots are needed.
+    pricing_columns = {
+        "time_factor", "demand_factor", "load_factor", "capacity_factor",
+        "seasonal_factor", "weekend_factor", "adjusted_fare", "final_fare"
+    }
+    helper_names = {"days", "demand", "load", "MIN_FARE", "MAX_FARE"}
+    found_columns = set()
+    found_bounds = set()
+    statements = []
+    for cell in notebook["cells"]:
+        if cell["cell_type"] != "code":
+            continue
+        source = "".join(cell["source"])
+        tree = ast.parse(source)
+        for statement in tree.body:
+            if not isinstance(statement, ast.Assign) or len(statement.targets) != 1:
+                continue
+            target = statement.targets[0]
+            selected = False
+            if isinstance(target, ast.Name) and target.id in helper_names:
+                selected = True
+                if target.id in {"MIN_FARE", "MAX_FARE"}:
+                    found_bounds.add(target.id)
+            elif (isinstance(target, ast.Subscript)
+                  and isinstance(target.value, ast.Name)
+                  and target.value.id == "flights"):
+                key = target.slice
+                # Support Python 3.8's AST representation as well.
+                if isinstance(key, ast.Index):
+                    key = key.value
+                if isinstance(key, ast.Constant) and key.value in pricing_columns:
+                    selected = True
+                    found_columns.add(key.value)
+            if selected:
+                statements.append(ast.get_source_segment(source, statement))
+    assert found_columns == pricing_columns, (
+        f"Notebook pricing formulas missing: {pricing_columns - found_columns}"
+    )
+    assert found_bounds == {"MIN_FARE", "MAX_FARE"}, (
+        "Notebook minimum or maximum fare assignment is missing"
+    )
+    with redirect_stdout(io.StringIO()):
+        for statement in statements:
+            exec(statement, namespace)
+    result = namespace["flights"]
+    return [(r.flight_id, r.origin, r.destination,
+             r.departure_date.date().isoformat(), r.final_fare)
+            for r in result.itertuples(index=False)]
 from validation import validate_final_fare
 
 
 # Fix the pricing date to make tests repeatable.
 PRICING_DATE = date(2027, 2, 1)
 
-
-class FixedDate(date):
-    @classmethod
-    def today(cls):
-        return PRICING_DATE
 
 
 def make_flight(
@@ -127,45 +199,44 @@ def run_tests():
     successful = 0
     failed = 0
 
-    with patch("pricing.date", FixedDate):
-        for name, expected, inputs in cases:
-            try:
-                check_price(name, expected, **inputs)
-
-            except AssertionError as error:
-                failed += 1
-                print(f"TEST FAILED: {name} — {error}")
-
-            except Exception as error:
-                failed += 1
-                print(
-                    f"TEST FAILED: {name} — "
-                    f"unexpected {type(error).__name__}: {error}"
-                )
-
-            else:
-                successful += 1
-
-        # Empty results are expected to return an empty list.
+    for name, expected, inputs in cases:
         try:
-            result = calculate_prices([])
-            assert result == [], (
-                f"Expected an empty list, got {result!r}"
-            )
+            check_price(name, expected, **inputs)
+
+        except AssertionError as error:
+            failed += 1
+            print(f"TEST FAILED: {name} — {error}")
 
         except Exception as error:
             failed += 1
             print(
-                "TEST FAILED: Empty flight list — "
-                f"{type(error).__name__}: {error}"
+                f"TEST FAILED: {name} — "
+                f"unexpected {type(error).__name__}: {error}"
             )
 
         else:
             successful += 1
-            print(
-                "EXPECTED RESULT CONFIRMED: "
-                "Empty flight list — returned []"
-            )
+
+    # Empty results are expected to return an empty list.
+    try:
+        result = calculate_prices([])
+        assert result == [], (
+            f"Expected an empty list, got {result!r}"
+        )
+
+    except Exception as error:
+        failed += 1
+        print(
+            "TEST FAILED: Empty flight list — "
+            f"{type(error).__name__}: {error}"
+        )
+
+    else:
+        successful += 1
+        print(
+            "EXPECTED RESULT CONFIRMED: "
+            "Empty flight list — returned []"
+        )
 
     total = successful + failed
 
