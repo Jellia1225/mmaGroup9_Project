@@ -2,9 +2,7 @@ import math
 from datetime import date
 
 
-# ============================================================
 # 1. FLIGHT INPUT VALIDATION
-# ============================================================
 
 def validate_flight(
     flight_id,
@@ -88,9 +86,9 @@ def validate_flight(
     )
 
 
-# ============================================================
+
 # 2. FINAL FARE VALIDATION
-# ============================================================
+
 
 def validate_final_fare(final_fare, min_fare=200, max_fare=800):
     for name, value in [
@@ -110,9 +108,9 @@ def validate_final_fare(final_fare, min_fare=200, max_fare=800):
     )
 
 
-# ============================================================
+
 # 3. BOOKING INPUT VALIDATION
-# ============================================================
+
 
 def validate_booking(ticket_number, seats_remaining):
     assert type(seats_remaining) is int, (
@@ -133,9 +131,7 @@ def validate_booking(ticket_number, seats_remaining):
     )
 
 
-# ============================================================
 # 4. TEST HELPER
-# ============================================================
 
 def check_case(name, function, arguments, should_pass):
     """
@@ -178,9 +174,8 @@ def check_case(name, function, arguments, should_pass):
         return False
 
 
-# ============================================================
+
 # 5. VALIDATION TESTS AND EDGE-CASE DEMONSTRATION
-# ============================================================
 
 if __name__ == "__main__":
     # Fixed dates make the tests repeatable.
