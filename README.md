@@ -153,9 +153,19 @@ The output shows whether each expected price or result was confirmed, or whether
 
 - **Single-flight booking**: The current system only allows users to book one flight at a time. Round trips or multiple flights cannot be booked together.
 
-- **Simulated flight data**: The flight data is randomly generated for this project and does not represent real-time airline information.
+- **Synthetic flight data**: The flight data is randomly generated for this project and does not represent real-time airline information. As a result, the model can demonstrate the mechanics of dynamic pricing, but it cannot confirm that the calculated fares are realistic or representative of actual Canadian airlines. For example, instead of calculating a flight demand from previous data, it is randomly generated.
 
-- **Predefined pricing rules**: The pricing factors and thresholds are predefined for this project instead of being estimated from historical airline pricing data.
+- **Predefined pricing rules**: The pricing factors and thresholds are predefined for this project instead of being estimated from historical airline pricing data. Thus, the model is not predictive or is not learning from the data, and as a result, there is no optimization process.
+
+- **Pricing model**: The selected pricing model assumes that the factors can simply be multiplied together, and does not consider any other possible interactions.
 
 - **Seat and class selection**: The current booking system does not allow users to choose a specific seat or ticket class. All bookings are treated the same without separating economy and business class.
+
+- **Other variables**: The model does not currently incorporate other potentially important variables like flight duration, distance, airport congestion, time of day, etc.
+
+- **Inappropriate for large datasets**: The current system is appropriate for small datasets, since the notebook loads the entire flights table into Pandas, however, with millions of records, the limitations become more clear.
+
+- **Flight timeline**: Flights are only assumed to run from 01-01-2027 to 31-12-2027. Therefore, the model is unable to compute the price for flights happening before 01-01-2027.
+
+- **Pricing caps**: The pricing has been capped at $800, therefore, different flights can end up with the exact same price even when their calculated fares are different. For instance, an adjusted fare of $850 and one of $1000 become $800 flights. Likewise, there is also a lower bound of $200. 
 
