@@ -9,3 +9,5 @@ DB_PATH = BASE_DIR / "potter_airlines.db"
 # get the dataset csv file path
 INPUT_CSV = BASE_DIR / "flights.csv"
 
+# path for store the formatted csv file
+CSV_PATH = BASE_DIR / "flights_formatted.csv"
